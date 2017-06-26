@@ -1,0 +1,204 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #333;
+    background-color: #fff;
+    height: 100%;
+    position: relative;
+    overflow-x: hidden;
+}
+
+p {
+    margin: 0;
+}
+
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+}
+
+.no-padding {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.no-rt-padding {
+    padding-right: 0px;
+}
+
+
+/*top banner section start*/
+
+#top .header {
+    background: #c5c5c5;
+    padding: 10px 0 20px 0;
+}
+
+#top .header .topimg img {
+    width: 600px;
+    display: block;
+    margin: 0 auto;
+}
+
+#top .selectMrkt {
+    display: -webkit-box;
+    margin: 0 auto;
+    text-align: center;
+    width: 44%;
+    background-color: #f8f8f8;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+#top .selectMrkt .form-group {
+    margin-bottom: 0px;
+    width: 130%;
+}
+
+#top .SelectAtag a {
+    color: #777;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 34px;
+}
+
+#top .SelectAtag a:hover,
+#top .SelectAtag a:focus {
+    color: #5e5e5e;
+    background-color: transparent;
+}
+
+.instructionS a {
+    text-align: right !important;
+    display: block;
+    width: 44%;
+    margin: 0 auto;
+    margin-top: 10px;
+    color: #f18b07;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.instructionS a:hover {
+    text-decoration: underline;
+}
+
+.instructionS a img {
+    width: 18px;
+    display: -webkit-inline-box;
+}
+
+
+/*top banner section end*/
+
+
+/*bottom section start */
+
+#bottom {
+    margin: 10px 0 60px 0;
+}
+
+#bottom .main {
+    background: #f7f7f7;
+    padding: 20px 10px 10px 10px;
+    border-radius: 10px;
+    width: 700px;
+    display: block;
+    margin: 0 auto;
+}
+
+#bottom .form-group {
+    margin-bottom: 20px;
+}
+
+#bottom .form-horizontal .control-label {
+    text-align: left;
+}
+
+#bottom .col-sm-2 {
+    width: 12%;
+}
+
+#bottom .btn-primary {
+    color: #fff;
+    background-color: #fe9206;
+    border-color: #d48116;
+}
+
+#bottom .indexed .col-md-4 {
+    width: 32.6%;
+}
+
+#bottom .indexed {
+    margin: 14px 0;
+}
+
+#bottom .indbody {
+    background-color: #fff;
+    padding: 10px;
+    border: 2px solid #ddd;
+    min-height: 65px;
+}
+
+#bottom .indbody p {
+    text-align: center;
+    color: #000;
+}
+
+#bottom .indbody p span {
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 6px 2px 7px;
+    font-weight: bold;
+}
+
+#bottom .indexed .no-rt-padding:nth-child(2) {
+    padding-left: 0px;
+}
+
+#bottom .indexed .no-rt-padding:nth-child(3) {
+    padding-left: 0px;
+}
+
+.indexed .lstBox {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.indexed .fstBox {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+#MoreData .keywords .table>thead>tr>th {
+    vertical-align: bottom;
+    background-color: #fff;
+}
+
+#MoreData .keywords .table>tbody>tr>td {
+    background-color: #dff0d8;
+}
+
+
+/*bottom section end */
+
+
+/*alrt section css start*/
+
+#alrtTop {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+
+/*alrt section css end*/
+
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+@media (min-width: 768px) and (max-width: 991px) {}
+
+@media (max-width: 767px) {}

@@ -1,0 +1,245 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>KWINDEXCHECKER</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!--Main Css-->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!--Angular cdn-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+
+
+
+    <!--top banner section start-->
+    <section id="top">
+        <div class="header">
+            <div class="topimg">
+                <img src="images/header.png" alt="logo" class="img-responsive" />
+            </div>
+            <div class="selectMrkt">
+                <div class="SelectAtag pull-left1">
+                    <a href="#">Select Marketplace:</a>
+                </div>
+                <div class="SectDrop pull-left1">
+                    <div class="form-group">
+                        <select class="form-control" id="sel1">
+                            <option>Amazon.com</option>
+                            <option>1Amazon.com</option>
+                            <option>2Amazon.com</option>
+                            <option>3Amazon.com</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="instructionS">
+                <a><img src="images/info.png" alt="info icon" class="img-responsive" /> Instructions </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!--top banner section end-->
+
+
+    <!--alrt section start-->
+    <section id="alrtTop">
+        <div class="span4 pull-right">
+            <div class="alert alert-info fade">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <strong>Alert!</strong> Here is my message..
+            </div>
+        </div>
+    </section>
+    <!--alrt section end-->
+
+<!--     <p class="text-center">{{search_term}}</p> -->
+
+    <!--bottom section start-->
+    <section id="bottom">
+        <div class="main">
+
+            <!--input value section start-->
+            <form class="form-horizontal" ng-submit="sendPost()">
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="">Enter :</label>
+                    <div class="col-sm-10 no-padding">
+                        <input type="text" class="form-control" id="" ng-model="search_term">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="email">Row 1 :</label>
+                    <div class="col-sm-10 no-padding">
+                        <textarea class="form-control" rows="1" id="comment"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="email">Row 2 :</label>
+                    <div class="col-sm-10 no-padding">
+                        <textarea class="form-control" rows="1" id="comment"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="email">Row 3 :</label>
+                    <div class="col-sm-10 no-padding">
+                        <textarea class="form-control" rows="1" id="comment"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="email">Row 4 :</label>
+                    <div class="col-sm-10 no-padding">
+                        <textarea class="form-control" rows="1" id="comment"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="email">Row 5 :</label>
+                    <div class="col-sm-10 no-padding">
+                        <textarea class="form-control" rows="1" id="comment"></textarea>
+                    </div>
+                </div>
+
+                <div class="SubBtn">
+                    <button type="submit" class="btn btn-primary BtnAlrt" id="searchKeywords" >Check keywords</button>
+                    <button type="button" class="btn btn-primary" id="resetButton">Reset</button>
+                </div>
+
+                <!--input value section end-->
+                No Of Items on Search String : <span ng-bind="noOfItems"></span>
+
+                <!--collapse section start-->
+                <div id="MoreData" class="collapsecollapse">
+
+                    <!--index section start-->
+                    <div class="indexed">
+                        <div class="row">
+                            <div class="col-md-4 no-rt-padding">
+                                <div class="indbody fstBox">
+                                    <p>Indexed <span>6</span></p>
+                                    <p>100%</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 no-rt-padding">
+                                <div class="indbody">
+                                    <p>Not indexed <span>0</span></p>
+                                    <p>100%</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 no-rt-padding">
+                                <div class="indbody lstBox">
+                                    <p>All keywords <span>3</span></p>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--index section start-->
+
+
+                    <!--keyword value section start-->
+                    <!--product show-->
+                    <div class="keywords">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Product Name</th> 
+                                    <th>Product Image</th>         
+                                    <th>Supplier Name</th> 
+                                    <th>supplier Year</th> 
+                                    <th>supplier Country</th>
+                                    <th>supplier Province</th>
+                                </tr>
+                            </thead>
+                            <tbody >
+                                <tr ng-repeat="singledata in tableData">
+                                    <td ng-bind="singledata.product_name"></td>
+                                    <td><img ng-src="{{singledata.product_image_url}}"></img></td>
+                                    <td ng-bind="singledata.supplier_name"></td>
+                                    <td ng-bind="singledata.supplier_year"></td>
+                                    <td ng-bind="singledata.supplier_country"></td>
+                  <!--                   <td ng-bind="singledata.supplier_province"></td>
+                                    <td ng-bind="singledata.supplier_history_gmv"></td> -->
+                                    <td ng-bind="singledata.price_range"></td>
+                                </tr>
+                               
+                            </tbody>
+                           
+                    </table>
+
+                        <div class="SubBtn">
+                            <button type="button" class="btn btn-primary" id="">Download as CSV</button>
+
+                        </div>
+                    </div>
+                </div>
+                <!--collapse section start-->
+
+            </form>
+        </div>
+    </section>
+    <!--bottom section end-->
+
+    {{data}}
+
+
+
+    <!-- jQuery (necessary for Bootstrap 's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!--script for alrt box-->
+    <!--<script>
+        $(document).ready(function() {
+            $(".BtnAlrt").on("click", function() {
+                $(".alert").removeClass("in").show();
+                $(".alert").delay(900).addClass("in").fadeOut(2000);
+            });
+        });
+    </script>-->
+
+    <script>
+        angular.module('myApp', [])
+            .controller('myCtrl', function($scope, $http) {
+                $scope.hello = {
+                    name: "Boaz"
+                };
+                $scope.search_term = "";
+                
+                $scope.sendPost = function() {
+                    var data = { "search_term": $scope.search_term };
+                    $scope.tableData = "";
+                    $scope.noOfItems = "";
+                    $http.post("https://api.sellerprime.com:32100/free_tool/product_source", data).then(function (res) {
+                        $scope.tableData = res.data.products;
+                        $scope.noOfItems = res.data.products.length;
+
+                    })
+                }
+            })
+    </script>
+</body>
+
+</html>
